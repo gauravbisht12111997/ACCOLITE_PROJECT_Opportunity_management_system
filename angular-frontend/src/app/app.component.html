@@ -1,0 +1,41 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a routerLink = "home" class="navbar-brand" href="#">
+      OPPORTUNITY MANAGEMENT SYSTEM
+    </a>
+    <a routerLink = "home" class="nav-link text-light">
+      LOG OUT
+    </a>
+  </nav>
+
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class = "nav-item">
+            <a routerLink="home" routerLinkActive="active" class="nav-link">Home</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="opportunities" routerLinkActive="active" class="nav-link">Opportunity List</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="create-opportunity" routerLinkActive="active" class="nav-link">Add Opportunity</a>
+        </li>
+    </ul>
+</div>
+</nav>
+<br>
+<br>
+
+
+<div class= "container">
+    <router-outlet>
+
+    </router-outlet>
+</div>
+<!-- 
+<footer class = "footer">
+    <div class = "container">
+        <span>Accolite Digital</span>
+    </div>
+</footer> -->

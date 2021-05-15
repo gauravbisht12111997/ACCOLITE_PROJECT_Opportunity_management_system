@@ -1,0 +1,55 @@
+<div *ngIf = "flag">
+<h2> Opportunity List </h2>
+<table class = "table table-striped table-dark table-bordered">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> POST </th>
+            <th> MANAGER </th>
+            <th> SKILLS </th>
+            <th> OPENINGS </th>
+            <th> LOCATION </th>
+            <th> ENDDATE </th>
+            <th> ACTIONS </th>
+        </tr>
+    </thead>
+
+<tbody>
+    <tr ng *ngFor = "let opportunity of opportunities!">
+        <td> {{opportunity.id}}</td>
+        <td>{{opportunity.post}}</td>
+        <td> {{opportunity.hiringManager}}</td>
+        <td>{{opportunity.skills}}</td>
+        <td>{{opportunity.openings}}</td>
+        <td>{{opportunity.location}}</td>
+        <td>{{opportunity.endDate}}</td>
+        <td>
+            <button (click) = "updateOpportunity(opportunity.id)" class = "btn btn-info">UPDATE</button>
+            <!-- <button 
+            (click) = "deleteOpportunity(opportunity.id)" 
+            class = "btn btn-danger" 
+            style="margin-left: 10px"> DELETE </button> -->
+            <button
+            class="btn btn-danger"
+            mwlConfirmationPopover
+            [popoverTitle]="popoverTitle"
+            [popoverMessage]="popoverMessage"
+            placement="left"
+            (confirm)="deleteOpportunity(opportunity.id)"
+            (cancel)="false"
+            style="margin-left: 20px"
+          >
+          Delete
+          </button>
+            <button (click) = "opportunityDetails(opportunity.id)" class = "btn btn-light" style="margin-left: 10px"> VIEW </button>
+        </td> 
+    </tr>
+</tbody>
+</table>
+</div>
+
+<div *ngIf = "!flag">
+    <div class="alert alert-danger" role="alert">
+      Please Sign in with your Google Account to access Opportunities.
+    </div>
+</div>

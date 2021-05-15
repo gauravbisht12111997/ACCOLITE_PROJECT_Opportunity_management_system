@@ -1,0 +1,55 @@
+
+<div *ngIf="flag" class="col-md-5 offset-md-3">
+    <h5>update Opportunity</h5>
+    <form (ngSubmit) = "onSubmit()">
+        <!-- <div class="form-group">
+            <label> ID </label>
+            <input type="text" class = "form-control" id="id"
+            [(ngModel)]="opportunity.id" name="id">
+        </div> -->
+        <div class="form-group">
+            <label> POST </label>
+            <input type="text" class = "form-control" id="post"
+            [(ngModel)]="opportunity.post" name="post">
+        </div>
+        <!-- <div class="form-group">
+            <label> MANAGER </label>
+            <input type="text" class = "form-control" id="hiringManager"
+            [(ngModel)]="opportunity.id" name="hiringManager">
+        </div> -->
+        <div class="form-group">
+            <label> SKILLS </label>
+            <input type="text" class = "form-control" id="skills"
+            [(ngModel)]="opportunity.skills" name="skills">
+        </div>
+        <div class="form-group">
+            <label> OPENINGS </label>
+            <input type="text" class = "form-control" id="openings"
+            [(ngModel)]="opportunity.openings" name="openings">
+        </div>
+        <div class="form-group">
+            <label> LOCATION </label>
+            <input type="text" class = "form-control" id="location"
+            [(ngModel)]="opportunity.location" name="location">
+        </div>
+        <div class="form-group">
+            <label> ENDDATE </label>
+            <input type="date" class = "form-control" id="endDate"
+            [(ngModel)]="opportunity.endDate" name="endDate">
+        </div>
+        <div class="form-group">
+            <label> DESCRIPTION </label>
+            <input type="text" class = "form-control" id="description" 
+            [(ngModel)]="opportunity.description" name="description">
+        </div>
+        <br>
+        <button class = "btn btn-success" type = "submit">SUBMIT</button>
+    </form>
+    </div>
+    <div *ngIf = "!flag">
+        <div class="alert alert-danger" role="alert">
+          Please Sign in with your Google Account to access Opportunities.
+        </div>
+    </div>
+
+   

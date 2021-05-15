@@ -1,0 +1,36 @@
+<div *ngIf = "flag" style="width: 800px;height: 500px; margin: 0 auto;">
+<h3> View Opportunity Details</h3>
+
+    <div>
+        <label><b> Id:</b></label>{{opportunity.id}}
+    </div>
+    <div>
+        <label><b> Post:</b></label>{{opportunity.post}}
+    </div>
+    <div>
+        <label><b> Manager:</b></label>{{opportunity.hiringManager}}
+    </div>
+    <div>
+        <label><b> Skills :</b></label>{{opportunity.skills}}
+    </div>
+    <div>
+        <label><b> Openings:</b></label>{{opportunity.openings}}
+    </div>
+    <div>
+        <label><b> Location:</b></label>{{opportunity.location}}
+    </div>
+    <div>
+        <label><b> End Date:</b></label>{{opportunity.endDate}}
+    </div>
+    <div>
+        <label><b> Description:</b></label>{{opportunity.description}}
+    </div>
+</div>
+
+
+<div *ngIf = "!flag">
+    <div class="alert alert-danger" role="alert">
+      Please Sign in with your Google Account to access Opportunities.
+    </div>
+</div>
+
